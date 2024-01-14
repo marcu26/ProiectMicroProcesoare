@@ -1,0 +1,242 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Eu NuAltul, atm, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Program Files (x86)\Keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      CMSIS_AGDI.dll V1.33.15.0
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+D:\ATM\ANUL IV\MicroP\Proiect\proiect_sem.uvprojx
+Project File Date:  01/08/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Program Files (x86)\Keil\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling system_MKL25Z4.c...
+Buzzer.c(1): warning: In file included from...
+./Buzzer.h(7): warning: no newline at end of file [-Wnewline-eof]
+void PORTA_IRQHandler(void);
+                            ^
+Buzzer.c(2): warning: In file included from...
+./Uart.h(5): warning: no newline at end of file [-Wnewline-eof]
+void UART0_IRQHandler(void);
+                            ^
+Buzzer.c(6): warning: // comments are not allowed in this language [-Wcomment]
+#define buzzer (4) //PTD4
+                   ^
+Buzzer.c(17): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                ;
+                ^
+Buzzer.c(27): warning: implicit conversion changes signedness: 'volatile int' to 'unsigned int' [-Wsign-conversion]
+                delay(frequency); // delay-ul stabilit mai sus
+                ~~~~~ ^~~~~~~~~
+5 warnings generated.
+compiling Buzzer.c...
+Pit.c(1): warning: In file included from...
+./Pit.h(3): warning: // comments are not allowed in this language [-Wcomment]
+void PIT_Init(void); // Functie de initializarea a modulului periferic
+                     ^
+./Pit.h(5): warning: no newline at end of file [-Wnewline-eof]
+uint8_t UTILS_PrintTimer(uint32_t value); // Functie menita sa printeze o valoare numarata in formatul MM:SS
+                                                                                                            ^
+Pit.c(2): warning: In file included from...
+./Uart.h(5): warning: no newline at end of file [-Wnewline-eof]
+void UART0_IRQHandler(void);
+                            ^
+Pit.c(6): warning: no previous extern declaration for non-static variable 'state' [-Wmissing-variable-declarations]
+int state = 0;
+    ^
+Pit.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int state = 0;
+^
+Pit.c(9): warning: // comments are not allowed in this language [-Wcomment]
+#define RED_LED_PIN (18)   // PORT B
+                           ^
+Pit.c(31): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  // Activarea <EE>ntreruperilor pe canalul 0
+               ^
+Pit.c(37): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // Activarea <EE>ntreruperii mascabile si setarea prioritatiis
+                     ^
+Pit.c(111): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+8 warnings generated.
+compiling Pit.c...
+assembling startup_MKL25Z4.s...
+main.c(1): warning: In file included from...
+./Uart.h(5): warning: no newline at end of file [-Wnewline-eof]
+void UART0_IRQHandler(void);
+                            ^
+main.c(2): warning: In file included from...
+./Pit.h(3): warning: // comments are not allowed in this language [-Wcomment]
+void PIT_Init(void); // Functie de initializarea a modulului periferic
+                     ^
+./Pit.h(5): warning: no newline at end of file [-Wnewline-eof]
+uint8_t UTILS_PrintTimer(uint32_t value); // Functie menita sa printeze o valoare numarata in formatul MM:SS
+                                                                                                            ^
+main.c(3): warning: In file included from...
+./Gpio.h(4): warning: no newline at end of file [-Wnewline-eof]
+void RGBLed_Init(void);
+                       ^
+main.c(4): warning: In file included from...
+./Adc.h(9): warning: no newline at end of file [-Wnewline-eof]
+extern volatile uint16_t analogInput;
+                                     ^
+main.c(5): warning: In file included from...
+./Uart.h(5): warning: no newline at end of file [-Wnewline-eof]
+void UART0_IRQHandler(void);
+                            ^
+main.c(7): warning: In file included from...
+./Buzzer.h(7): warning: no newline at end of file [-Wnewline-eof]
+void PORTA_IRQHandler(void);
+                            ^
+main.c(14): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main() 
+        ^
+         void
+main.c(78): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(27): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint8_t prev_parte_zecimala = 0;
+                ^
+10 warnings generated.
+compiling main.c...
+Gpio.c(1): warning: In file included from...
+./Gpio.h(4): warning: no newline at end of file [-Wnewline-eof]
+void RGBLed_Init(void);
+                       ^
+Gpio.c(3): warning: // comments are not allowed in this language [-Wcomment]
+#define RED_LED_PIN (18)   // PORT B
+                           ^
+Gpio.c(53): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+3 warnings generated.
+compiling Gpio.c...
+ClockSettings.c(13): warning: // comments are not allowed in this language [-Wcomment]
+        // MCGOUTCLOCK are ca si iesire, selectia FLL
+        ^
+1 warning generated.
+compiling ClockSettings.c...
+Adc.c(1): warning: In file included from...
+./Adc.h(9): warning: no newline at end of file [-Wnewline-eof]
+extern volatile uint16_t analogInput;
+                                     ^
+Adc.c(2): warning: In file included from...
+./Uart.h(5): warning: no newline at end of file [-Wnewline-eof]
+void UART0_IRQHandler(void);
+                            ^
+Adc.c(4): warning: // comments are not allowed in this language [-Wcomment]
+#define ADC_CHANNEL (11) // PORT C PIN 2
+                         ^
+Adc.c(9): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void ADC0_Init() {
+              ^
+               void
+Adc.c(45): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int ADC0_Calibrate() {
+                  ^
+                   void
+Adc.c(74): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint16_t calibration_var = 0x0000;
+                 ^
+Adc.c(115): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+uint16_t ADC0_Read(){
+                  ^
+                   void
+Adc.c(136): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void ADC0_IRQHandler(){
+                    ^
+                     void
+8 warnings generated.
+compiling Adc.c...
+Uart.c(1): warning: In file included from...
+./Uart.h(5): warning: no newline at end of file [-Wnewline-eof]
+void UART0_IRQHandler(void);
+                            ^
+Uart.c(3): warning: no previous extern declaration for non-static variable 'isOpen' [-Wmissing-variable-declarations]
+int isOpen = 1;
+    ^
+Uart.c(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int isOpen = 1;
+^
+Uart.c(4): warning: no previous extern declaration for non-static variable 'direction' [-Wmissing-variable-declarations]
+int direction = 1;
+    ^
+Uart.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int direction = 1;
+^
+Uart.c(5): warning: no previous extern declaration for non-static variable 'isBuzzer' [-Wmissing-variable-declarations]
+int isBuzzer = 1;
+    ^
+Uart.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int isBuzzer = 1;
+^
+Uart.c(9): warning: // comments are not allowed in this language [-Wcomment]
+                //Acest loop asteapta pana cand bitul TDRE (Transmitter Data Register Empty) din registrul UART0->S1 devine 1.
+                ^
+Uart.c(12): warning: while loop has empty body [-Wempty-body]
+        while(!(UART0->S1 & UART0_S1_TDRE_MASK));
+                                                ^
+Uart.c(12): note: put the semicolon on a separate line to silence this warning
+Uart.c(117): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+Uart.c(72): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint32_t osr = 4; // Over-Sampling Rate (numarul de esantioane luate per bit-time)
+                 ^
+8 warnings generated.
+compiling Uart.c...
+linking...
+Program Size: Code=4340 RO-data=288 RW-data=12 ZI-data=360  
+".\Objects\proiect_sem.axf" - 0 Error(s), 43 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.0.pack
+                Keil.Kinetis_KLxx_DFP.1.15.0
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 2.5.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/MKL25Z128xxx4
+  ./RTE/_Target_1
+  C:/Users/marcu/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/marcu/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.5.0
+      Include file:  Device/Source/system_MKL25Z4.h
+      Source file:   Device/Source/system_MKL25Z4.c
+      Source file:   Device/Source/ARM/startup_MKL25Z4.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
